@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ajay.entity.Employee;
 import com.ajay.service.EmployeeService;
@@ -51,6 +52,12 @@ public class EmployeeController {
 		map.put("msg", msgWithId);
 		return "result";
 	}
-	
+
+	@GetMapping("/delete")
+	public String deleteEmp(@RequestParam("id") int id, Map<String, String> map) {
+		String delMsg = empService.deleteEmpById(id);
+		map.put("delMsg", delMsg);
+		return "delete_msg";
+	}
 	
 }

@@ -33,6 +33,8 @@
 					<input type="submit" value="submit">
 				</div>
 			</table>
+			<br>
+			<br> <a href="./emp_data">Employee Data</a>
 		</center>
 	</frm:form>
 	</table>

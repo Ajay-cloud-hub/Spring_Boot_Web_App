@@ -15,6 +15,7 @@
 				<th>PASSWORD</th>
 				<th>ROLE</th>
 				<th>Edit/Update</th>
+				<th>Delete</th>
 			</tr>
 			<br>
 			<c:forEach var="emp" items="${empList}">
@@ -22,9 +23,12 @@
 					<td>${emp.email}</td>
 					<td>${emp.pwd}</td>
 					<td>${emp.role}</td>
+					<td><a href="/update?id=${emp.id}">update</a></td>
+					<td><a href="/delete?id=${emp.id}">delete</a></td>
 				</tr>
 			</c:forEach>
-		</table>
+		</table><br><br>
+		<a href="/register">Register Here...</a>
 	</center>
 </body>
 </html>
