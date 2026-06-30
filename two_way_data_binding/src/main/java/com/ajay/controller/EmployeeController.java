@@ -3,6 +3,7 @@ package com.ajay.controller;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -58,6 +59,22 @@ public class EmployeeController {
 		String delMsg = empService.deleteEmpById(id);
 		map.put("delMsg", delMsg);
 		return "delete_msg";
+	}
+	
+	@GetMapping("/update")
+	public String updateEmployee(@ModelAttribute("employee") Employee emp, @RequestParam("id") int id, Map<String, String> map) {
+		Optional<Employee> empl = empService.getEmpById(id);
+		emp.setEmail(empl.get().getEmail());
+		emp.setPwd(empl.get().getPwd());
+		emp.setRole(empl.get().getRole());
+		return "update";
+	}
+	
+	@PostMapping("/update")
+	public String updateEmp(@RequestParam("id") int id, @ModelAttribute("employee") Employee emp, Map<String, String> map) {
+		String update = empService.updateEmpById(id,emp);
+		map.put("update_msg", update);
+		return "update_msg";
 	}
 	
 }

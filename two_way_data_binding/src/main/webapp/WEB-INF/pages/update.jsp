@@ -5,34 +5,35 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Data</title>
+<title>Update Form</title>
 </head>
 <body>
 	<div align="center">
 		<frm:form modelAttribute="employee">
-		<h2>Registration Form</h2>
+			<h2>Update Form</h2>
 			<table border="1">
+				<frm:hidden path="id" />
 				<tr>
-					<td><label>Name:</label></td>
-					<td><frm:input type="text" path="email" /></td>
+					<td>Email:</td>
+					<td><frm:input path="email" /></td>
 				</tr>
 				<tr>
-					<td><label>Email:</label></td>
-					<td><frm:input type="text" path="pwd" /></td>
+					<td>Password:</td>
+					<td><frm:input path="pwd" /></td>
 				</tr>
 				<tr>
-					<td><label>Role:</label></td>
-					<td><frm:input type="text" path="role" /></td>
+					<td>Role:</td>
+					<td><frm:input path="role" /></td>
 				</tr>
 				<tr>
 					<td></td>
 					<td><input type="submit" value="submit"></td>
-				</tr>
 			</table>
-			<br>
-			<br>
-			<h2><a href="./emp_data">Employee Data</a></h2>
 		</frm:form>
+		<br> <br>
+		<h2>
+			<a href="/emp_data">Employee Data</a>
+		</h2>
 	</div>
 </body>
 </html>

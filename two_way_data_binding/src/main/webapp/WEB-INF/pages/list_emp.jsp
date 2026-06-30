@@ -8,8 +8,9 @@
 <title>EMPLOYEES</title>
 </head>
 <body>
-	<center>
-		<table border="1px">
+	<div align="center">
+	<h2>Employee Data</h2>
+		<table border="1">
 			<tr>
 				<th>EMAIL</th>
 				<th>PASSWORD</th>
@@ -17,18 +18,20 @@
 				<th>Edit/Update</th>
 				<th>Delete</th>
 			</tr>
-			<br>
 			<c:forEach var="emp" items="${empList}">
 				<tr>
-					<td>${emp.email}</td>
-					<td>${emp.pwd}</td>
-					<td>${emp.role}</td>
-					<td><a href="/update?id=${emp.id}">update</a></td>
-					<td><a href="/delete?id=${emp.id}">delete</a></td>
+					<td align="center">${emp.email}</td>
+					<td align="center">${emp.pwd}</td>
+					<td align="center">${emp.role}</td>
+					<td align="center"><a href="/update?id=${emp.id}" style="text-decoration: none;">update</a></td>
+					<td align="center"><a href="/delete?id=${emp.id}" style="text-decoration: none;">delete</a></td>
 				</tr>
 			</c:forEach>
-		</table><br><br>
-		<a href="/register">Register Here...</a>
-	</center>
+		</table>
+		<br> <br>
+		<h2>
+			<a href="/register">Register Here...</a>
+		</h2>
+	</div>
 </body>
 </html>

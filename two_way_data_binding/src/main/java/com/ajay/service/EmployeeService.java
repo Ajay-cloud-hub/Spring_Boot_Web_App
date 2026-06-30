@@ -37,4 +37,23 @@ public class EmployeeService {
 			return "Employee Not Found";
 		}
 	}
+	public Optional<Employee> getEmpById(int id) {
+		Optional<Employee> employee = empRepo.findById(id);
+		return employee;
+	}
+	
+	public String updateEmpById(int id, Employee emp) {
+		Optional<Employee> byId = empRepo.findById(id);
+		if(byId.isPresent()) {
+			Employee save = empRepo.save(emp);
+			return "Employee is updated with id: "+save.getId();
+		}else {
+			return "Not Found";
+		}
+	}
+	
+	
 }
+
+
+

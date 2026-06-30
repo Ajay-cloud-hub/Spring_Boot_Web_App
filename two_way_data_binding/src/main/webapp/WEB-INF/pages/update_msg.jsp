@@ -5,11 +5,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Delete</title>
+<title>Update</title>
 </head>
 <body>
 	<div align="center">
-		<h2>${delMsg}</h2>
+		<h2>${update_msg}</h2>
 		<br>
 		<h2>
 			<a href="./emp_data">Employee Data</a>
