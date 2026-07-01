@@ -31,7 +31,7 @@
 			</table>
 			<br>
 			<br>
-			<h2><a href="./emp_data" style="text-decoration:none">Employee Data</a></h2>
+			<h2><a href="./emp_data">Employee Data</a></h2>
 		</frm:form>
 	</div>
 </body>

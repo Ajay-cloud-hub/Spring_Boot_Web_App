@@ -12,7 +12,7 @@
 		<h2>${msg}</h2>
 		<br>
 		<h2>
-			<a href="./emp_data" style="text-decoration:none">EMPLOYEE DATA</a>
+			<a href="./emp_data">EMPLOYEE DATA</a>
 		</h2>
 	</div>
 </body>

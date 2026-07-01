@@ -32,7 +32,7 @@
 		</frm:form>
 		<br> <br>
 		<h2>
-			<a href="/emp_data" style="text-decoration:none">Employee Data</a>
+			<a href="/emp_data">Employee Data</a>
 		</h2>
 	</div>
 </body>

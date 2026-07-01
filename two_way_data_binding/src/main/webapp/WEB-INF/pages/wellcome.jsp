@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div align="center">
-		<h2><a href="./register" style="text-decoration:none">Click Here</a></h2>
+		<a href="./register">Click Here</a>
 	</div>
 </body>
 </html>
